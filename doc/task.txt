@@ -1,0 +1,23 @@
+Traning Service
+--------------------
+How many tasks(API'S) will have in training Service Module ?
+
+Category API 
+How many types of category api ?
+1 {ID,Name,learners}
+
+2 {id,name,learners,language{id,name,status,learners}}
+what parameter should have in language entity
+
+
+3 {id,name,cfCourse{},fsCourse{},spcourse{}}
+=> what parameters should have in cfCourseEntity
+=> what parameters should have in fsCourseEntity
+=> what parameters should have in spCourseEntity
+
+
+How many types of Certificate Course api ?
+How many types of Full Stack Course api ?
+How many types of SPCourse api ?
+
+

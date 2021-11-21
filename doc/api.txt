@@ -1,0 +1,49 @@
+=>Category API
+{id,name,learners}
+
+=>Category with Language api || with one to many || with odering with asc
+{catid,id,name,orsedby,status, learners}
+
+
+
+=>Category list 
+
+Course {catid,id,tittle,istrending=true,inDependend=0}
+fullStack{
+catid,id,tittle,istrending=true,inDependend=0 || NOC,Duraction,Learners,image,   form in k 
+}
+
+
+=>Maven Configration 
+Swagger Configration
+Profiling Configration
+Cookie Configration
+ModelMapper Configration
+
+=>Category API
+=>Category with Language api
+=>Course API
+=>fullStack Course API 
+
+############################################
+=>Course Mster
+title 
+course name
+leanners
+rating
+rating count
+with batch (start date, remaning day Batch Type(wd= Weekdays - (Mon- Friday)))
+
+
+=>fscourse
+title 
+course name
+hours
+leanners
+rating
+rating count
+
+=>spCourse
+title 
+course name
+price
