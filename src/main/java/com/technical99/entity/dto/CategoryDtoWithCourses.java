@@ -17,7 +17,7 @@ public class CategoryDtoWithCourses {
 
 	private List<CourseDto> course;
 
-	private List<FullStackCourseDto> fsCourse;
+	private List<FSCourseDto> fsCourse;
 
 	 private List<SPCourseDto> spCourse;
 }

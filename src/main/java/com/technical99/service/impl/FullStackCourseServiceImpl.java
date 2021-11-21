@@ -10,9 +10,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.technical99.dao.FullStackCourseDao;
+import com.technical99.dao.Specifications.CourseSpecification;
+import com.technical99.dao.Specifications.FsCourseSpecification;
 import com.technical99.entity.FullStackCourse;
-import com.technical99.entity.dto.FullStackCourseDto;
-import com.technical99.entity.dto.FullStackCourseDtoListing;
+import com.technical99.entity.dto.FSCourseDto;
+import com.technical99.entity.dto.FSCourseDtoFullListing;
+import com.technical99.entity.dto.FSCourseDtoListing;
+import com.technical99.entity.specificationDTO.FsCourseRequest;
 import com.technical99.service.FullStackCourseService;
 
 @Service
@@ -24,6 +28,9 @@ public class FullStackCourseServiceImpl implements FullStackCourseService {
 	@Autowired
 	private ModelMapper modelMapper;
 	
+	@Autowired
+	private FsCourseSpecification spec;
+	
 	@Override
 	public List<FullStackCourse> getFullList() {
 		return dao.findAll();
@@ -31,15 +38,21 @@ public class FullStackCourseServiceImpl implements FullStackCourseService {
 	}
 	
 	@Override
-	public List<FullStackCourseDto> getListDto() {
-		return dao.findAll().stream().map(post -> modelMapper.map(post, FullStackCourseDto.class))
+	public List<FSCourseDto> getListDto() {
+		return dao.findAll().stream().map(post -> modelMapper.map(post, FSCourseDto.class))
 				.collect(Collectors.toList());
 	}
 
 	@Override
-	public List<FullStackCourseDtoListing> getListing() {
-		// TODO Auto-generated method stub
-		return dao.findAll().stream().map(post -> modelMapper.map(post, FullStackCourseDtoListing.class))
+	public List<FSCourseDtoListing> getListing() {
+		return dao.findAll().stream().map(post -> modelMapper.map(post, FSCourseDtoListing.class))
+				.collect(Collectors.toList());
+		
+	}
+	
+	@Override
+	public List<FSCourseDtoFullListing> getFullListing(FsCourseRequest specs) {
+		return dao.findAll(spec.get(specs)).stream().map(post -> modelMapper.map(post, FSCourseDtoFullListing.class))
 				.collect(Collectors.toList());
 		
 	}

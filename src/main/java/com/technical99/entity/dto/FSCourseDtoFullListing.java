@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Data
 @JsonPropertyOrder({ "CourseId",  "Title","Learners","Hours","Rating","RatingCount"})
-public class FullStackCourseDtoListing {
+public class FSCourseDtoFullListing {
 
 
     

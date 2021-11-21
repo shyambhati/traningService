@@ -1,15 +1,12 @@
 package com.technical99.dao;
 
-import java.util.List;
-
 import javax.transaction.Transactional;
-
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import com.technical99.entity.FullStackCourse;
 
-@Repository
+@RepositoryRestResource
 @Transactional
-public interface FullStackCourseDao extends JpaRepository<FullStackCourse, Long> {
+public interface FullStackCourseDao extends JpaRepository<FullStackCourse, Long>,JpaSpecificationExecutor<FullStackCourse> {
 }

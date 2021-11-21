@@ -3,7 +3,7 @@ package com.technical99.entity.dto;
 import lombok.Data;
 
 @Data
-public class FullStackCourseDto {
+public class FSCourseDto {
 
 	int courseId;
 
