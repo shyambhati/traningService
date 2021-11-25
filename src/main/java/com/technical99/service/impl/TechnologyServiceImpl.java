@@ -34,5 +34,11 @@ public class TechnologyServiceImpl implements TechnologyService{
 				.collect(Collectors.toList());
 	
 	}
+
+	@Override
+	public List<TechnologyDto> getListByLangId(int langId) {		
+		return dao.findByLangId(langId).stream().map(post -> modelMapper.map(post, TechnologyDto.class))
+				.collect(Collectors.toList());
+	}
 	
 }

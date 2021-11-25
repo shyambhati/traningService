@@ -8,5 +8,7 @@ public interface TechnologyService {
 
 	public List<Technology> getlist();	
 	
-	public List<TechnologyDto> getListDto();	
+	public List<TechnologyDto> getListDto();
+
+	public List<TechnologyDto> getListByLangId(int langId);	
 }

@@ -15,7 +15,7 @@ public class WebConfig {
     public ObjectMapper configureJson() {
         return new Jackson2ObjectMapperBuilder()
                 .indentOutput(true)
-                .propertyNamingStrategy( PropertyNamingStrategies.UPPER_CAMEL_CASE)
+                .propertyNamingStrategy(PropertyNamingStrategies.LOWER_CAMEL_CASE)
                 .build();
     }
 
@@ -25,7 +25,7 @@ public class WebConfig {
         return builder -> {
 
             builder.indentOutput(true);
-            builder.propertyNamingStrategy(PropertyNamingStrategies.UPPER_CAMEL_CASE);
+            builder.propertyNamingStrategy(PropertyNamingStrategies.LOWER_CAMEL_CASE);
         };
     }
 }
